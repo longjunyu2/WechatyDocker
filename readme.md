@@ -8,7 +8,7 @@ docker build -t <tag> .
 ```
 镜像构建完成后即可创建容器，以下代码会生成一个容器，请根据自己的实际情况来修改。其中<token>请修改为自己设定的值
 ```shell
-docker run -d --name=wechaty-gateway --net=bridge -p 8080:8080 -e WECHATY_PUPPET_SERVICE_TOKEN="<token>"-v /WechatyData:/wechaty/data --restart=unless-stopped wechaty:latest
+docker run -d --name=wechaty-gateway --net=bridge -p 8080:8080 -e WECHATY_PUPPET_SERVICE_TOKEN="<token>" -v /WechatyData:/wechaty/data --restart=unless-stopped wechaty:latest
 ```
 获取容器的ID
 ```shell
