@@ -2,11 +2,11 @@
   使用Dockerfile构建默认使用UOS版协议的WechatyGateway(Wechaty项目中用于提供除ts外的其他编程语言支持的网关服务)
 ## 用法
 使用本项目前请阅读wechaty官方提供的文档，本项目提供的用法仅作为细节补充  
-在项目根目录下执行以下命令来生成docker镜像，其中<tag>替换成镜像标签，在本文中使用`wechaty:latest`作为镜像标签。
+在项目根目录下执行以下命令来生成docker镜像，其中&lt;tag&gt;替换成镜像标签，在本文中使用`wechaty:latest`作为镜像标签。
 ```shell
 docker build -t <tag> .
 ```
-镜像构建完成后即可创建容器，以下代码会生成一个容器，请根据自己的实际情况来修改。其中<token>请修改为自己设定的值
+镜像构建完成后即可创建容器，以下代码会生成一个容器，请根据自己的实际情况来修改。其中&lt;token&gt;请修改为自己设定的值
 ```shell
 docker run -d --name=wechaty-gateway --net=bridge -p 8080:8080 -e WECHATY_PUPPET_SERVICE_TOKEN="<token>" -v /WechatyData:/wechaty/data --restart=unless-stopped wechaty:latest
 ```
@@ -14,7 +14,7 @@ docker run -d --name=wechaty-gateway --net=bridge -p 8080:8080 -e WECHATY_PUPPET
 ```shell
 docker ps
 ```
-容器首次运行后，稍等一段时间，使用以下命令查看容器的运行日志，获取微信二维码链接来扫码登录。其中<CONTAINER_ID>替换为上一步获取的ID
+容器首次运行后，稍等一段时间，使用以下命令查看容器的运行日志，获取微信二维码链接来扫码登录。其中&lt;CONTAINER_ID&gt;替换为上一步获取的ID
 ```shell
 docker logs -f -t --tail=200 <CONTAINER_ID>
 ```
