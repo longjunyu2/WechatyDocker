@@ -1,7 +1,7 @@
 # WechatyDocker
   使用Dockerfile构建默认使用UOS版协议的WechatyGateway(Wechaty项目中用于提供除ts外的其他编程语言支持的网关服务)
 ## 用法
-使用本项目前请阅读wechaty官方提供的文档，本项目提供的用法仅作为细节补充
+使用本项目前请阅读wechaty官方提供的文档，本项目提供的用法仅作为细节补充  
 在项目根目录下执行以下命令来生成docker镜像，其中<tag>替换成镜像标签，在本文中使用`wechaty:latest`作为镜像标签。
 ```shell
 docker build -t <tag> .
